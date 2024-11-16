@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Layout</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="arrangement">
+        <div class="image-container">
+          <div class="desserts"><h3>Desserts</h3></div>
+          <div class="images" id="productList"></div>
+        </div>
+        <div class="cart">
+          <div id="heading">
+            <h4>Your Cart <span id="cartQuantity"></span></h4>
+          </div>
+          <div id="cartList"></div>
+          <div id="price">
+            <div><p>Order Total</p></div>
+            <div><p id="dollar">$46.50</p></div>
+          </div>
+
+          <div id="delivery">
+            <p>This is a <span id="bold">carbon-neutral</span> delivery</p>
+          </div>
+          <button id="Confirm">
+            <p class="order">Confirm Order</p>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="modal hide">
+      <div class="modalContainer">
+        <button id="closeModal">
+          <img src="images/icon-order-confirmed.svg" alt="" />
+        </button>
+        <h1>Order Confirmed!</h1>
+        <p>We hope you enjoy your food!</p>
+        <div id="orderContent"></div>
+        <div><button id="newOrder">Start New Order</button></div>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
+
