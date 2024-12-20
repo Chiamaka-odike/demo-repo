@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap");
+body {
+  padding: 30px;
+
+  background-color: rgb(250, 249, 249);
+}
+.container {
+  background-image: url("/images/sky\ edittto.jpg");
+  background-size: cover;
+  /* margin-top: 30px; */
+}
+nav {
+  background-color: rgb(246, 244, 244);
+  /* color: white; */
+  padding: 20px 50px;
+  /* margin-bottom: 20px; */
+}
+.navTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 20px;
+  color: rgb(19, 99, 149);
+}
+
+.LogIn {
+  border: 3px solid rgb(19, 99, 149);
+  color: rgb(19, 99, 149);
+  padding: 10px 30px;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+}
+.LogIn:hover {
+  background-color: rgb(19, 99, 149);
+  color: #fff;
+}
+.intro {
+  font-size: 40px;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 700px;
+  color: #fff;
+}
+#Welcome {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  font-style: italic;
+  border-bottom: #fff solid 3px;
+  width: fit-content;
+  color: #fff;
+}
+#body {
+  width: 700px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: #fff;
+}
+.main {
+  padding: 30px;
+}
+/*#start {
+  border: white solid 3px;
+  text-align: center;
+  width: 200px;
+  color: rgb(19, 99, 149);
+  cursor: pointer;
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#start:hover {
+  background-color: rgb(144, 201, 237);
+  border: rgb(144, 201, 237) solid 3px;
+  color: white;
+}*/
+.lowerBody {
+  /* background-color: skyblue; */
+  background-color: rgb(250, 249, 249);
+}
+.grouping{
+    background-color: rgb(250, 249, 249);
+}
+.firstGrouping {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* flex-wrap: wrap; */
+  margin-top: 40px;
+  margin-left: 10px;
+  /* border: 3px solid black; */
+  /* gap: 20px; */
+}
+.secondGrouping {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* flex-wrap: wrap; */
+  margin-top: 40px;
+  margin-left: 10px;
+  /* border: 3px solid black; */
+  /* gap: 20px; */
+}
+.deals {
+  color: rgb(19, 99, 149);
+  font-size: 20px;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  
+}
+.deals:hover{
+   
+        transform: scale(1.1);
+        text-shadow: 2px 2px 4px gray;
+        text-decoration: underline;
+    
+    
+}
+.details {
+  color: rgb(19, 99, 149);
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 350px;
+  padding-top: 10px;
+  margin-top: 100px;
+}
+.deep {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.note {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  gap: 10px;
+}
+.finput {
+  padding: 5px;
+  border: rgb(19, 99, 149) solid 2px;
+}
+.newsletter {
+  width: 400px;
+}
+.subscibe {
+  width: 500px;
+}
+.fbutton {
+  padding: 5px;
+  background-color: rgb(19, 99, 149);
+  color: white;
+  border: rgb(19, 99, 149) solid 2px;
+  cursor: pointer;
+}
+.fbutton:hover {
+  background-color: white;
+  color: rgb(19, 99, 149);
+}
+.images {
+  display: flex;
+  gap: 10px;
+  /* margin-right: 10px; */
+}
+/* .rightfooter{ */
+/* display: flex; */
+/* } */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgb(19, 99, 149);
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 50px;
+}
+.socials {
+  align-content: center;
+  align-self: center;
+  align-items: center;
+}
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  color: rgb(19, 99, 149);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  margin-top: 50px;
+}
+@media (max-width: 480px) {
+  .Total {
+    /* width: 100%; */
+    padding: 30px;
+  }
+  .info {
+    display: none;
+  }
+}

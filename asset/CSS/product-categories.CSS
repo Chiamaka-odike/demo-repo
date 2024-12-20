@@ -1,0 +1,13 @@
+#categoiesList{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+.categoryItem{
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #e1e1e1;
+}

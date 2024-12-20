@@ -3,47 +3,190 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Responsive Layout</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Home page</title>
   </head>
+  <link rel="stylesheet" href="asset/CSS/style.css" />
   <body>
-    <div class="container">
-      <div class="arrangement">
-        <div class="image-container">
-          <div class="desserts"><h3>Desserts</h3></div>
-          <div class="images" id="productList"></div>
-        </div>
-        <div class="cart">
-          <div id="heading">
-            <h4>Your Cart <span id="cartQuantity"></span></h4>
+    <div class="Total">
+      <div class="container">
+        <nav>
+          <div class="navTop">
+            <div class="navItem">
+              <img
+                src="images/sky logo 3.png"
+                width="80px"
+                height="50px"
+                alt="Sky Logo"
+              />
+            </div>
+            <div class="navItem">
+              <p><a href="product-categories.html">Categoriessss</a></p>
+              <!-- <p><a href="product-categories.html" id="categoryLink"></a>Categoriessss</p> -->
+              <p class="info">About</p>
+              <p class="info">Help</p>
+              <p class="info">Cart</p>
+            </div>
+            <p class="LogIn">Log in</p>
           </div>
-          <div id="cartList"></div>
-          <div id="price">
-            <div><p>Order Total</p></div>
-            <div><p id="dollar">$46.50</p></div>
+        </nav>
+        <div class="main">
+          <div class="intro">
+            <p>Shopping Made Easy and Accessible.</p>
           </div>
+          <p id="Welcome">Welcome to Sky</p>
+          <p id="body">
+            Your Shopping Adventure Awaits! At Sky, we believe in elevating your
+            shopping experience to new heights. Explore a wide range of curated
+            products designed to bring quality, style, and convenience to your
+            doorstep. Whether you’re looking for the latest trends, everyday
+            essentials, or unique finds, Sky has it all. Shop smart. Shop
+            stylish. Shop Sky.
+          </p>
 
-          <div id="delivery">
-            <p>This is a <span id="bold">carbon-neutral</span> delivery</p>
-          </div>
-          <button id="Confirm">
-            <p class="order">Confirm Order</p>
-          </button>
+          <!--<div id="start">
+            <h3>Get Started!</h3>
+          </div>-->
         </div>
       </div>
+      <div class="lowerBody">
+        <div class="grouping">
+        <div class="firstGrouping" >
+          <div class="deals">
+          <p>FASHION</p>
+        <img src="images/fashion.jpg" width="200px" height="200px" alt="Fashion Icon" />
+      </div>
+      <div class="deals">
+        <p>FURNITURE</p>
+        <img src="images/living room.jpg" width="200px" alt="Living Room" />
+      </div>
+      <div class="deals">
+        <p>GADGETS</p>
+        <img src="images/gadgets.jpg" width="200px" height="200px" alt="Gadgets" />
+      </div>
+      <div class="deals">
+        <p>GROCERIES</p>
+        <img src="images/groceries.jpg" width="200px" height="200px" alt="Groceries" />
+      </div>
+      </div>
+      <div class="secondGrouping">
+        <div class="deals">
+        <p>BEAUTY</p>
+        <img src="images/beauty.jpg" width="200px" height="200px" alt="Beauty" />
+      </div>
+      <div class="deals">
+        <p>SPORTS</p>
+        <img src="images/sports.jpg" width="200px" height="200px"alt="Sports" />
+      </div>
+      <div class="deals">
+        <p>APPLIANCES</p>
+        <img src="images/appliances.jpg" width="200px" height="200px"alt="Appliances" />
+      </div>
+      <div class="deals">
+        <p>CARS</p>
+        <img src="images/car.jpg" width="200px" height="200px" alt="Cars" />
+      </div>
+      </div>
     </div>
-    <div class="modal hide">
-      <div class="modalContainer">
-        <button id="closeModal">
-          <img src="images/icon-order-confirmed.svg" alt="" />
-        </button>
-        <h1>Order Confirmed!</h1>
-        <p>We hope you enjoy your food!</p>
-        <div id="orderContent"></div>
-        <div><button id="newOrder">Start New Order</button></div>
+        <div class="deep">
+          <div class="details">
+            <div class="note">
+              <img
+                src="images/truck icon.png"
+                width="50px"
+                height="50px"
+                alt="Delivery"
+              />
+              <h1>FREE SHIPPING</h1>
+            </div>
+            <p>
+              Enjoy free shipping on all orders with no minimum purchase! Shop
+              now and have your favorite items delivered right to your doorstep
+              at no extra cost.
+            </p>
+          </div>
+          <div class="details">
+            <div class="note">
+              <img
+                src="images/refund.png"
+                width="50px"
+                height="50px"
+                alt="refund"
+              />
+              <h1>30 DAYS RETURN</h1>
+            </div>
+            <p>
+              We offer a 30-day refund policy. If you're not completely
+              satisfied with your purchase, simply return it within 30 days for
+              a full refund—no questions asked.
+            </p>
+          </div>
+          <div class="details">
+            <div class="note">
+              <img
+                src="images/gift card.jpg"
+                width="50px"
+                height="50px"
+                alt="Gift card"
+              />
+              <h1>GIFT CARD</h1>
+            </div>
+            <p>
+              Buy gift cards and use coupon codes easily to enjoy discounts or
+              shop your favourite products seamlessly.
+            </p>
+          </div>
+        </div>
+        <div class="footer">
+        <div class="newsletter">
+          <div class="subscibe">
+          <h1>Subscribe to our newsletter</h1>
+        </div>
+          <p>Be among the first to hear about the latest offers when you subscribe to our newsletter!</p>
+          <input type="text" placeholder="Enter your email" class="finput">
+          <button class="fbutton">Subscribe!</button>
+        </div>
+        <!-- <div class="rightFooter"> -->
+         
+          <ul>
+            <h3>About</h3>
+            <li>Company</li>
+              <li>Contact</li>
+              <li>Carrers</li>
+              <li>Affiliate</li>
+             <li>Stores</li>
+            
+          </ul>
+          
+          <ul>
+            <h3>Useful Links</h3>
+            <li>Support</li>
+              <li>Refund</li>
+              <li>Feedback</li>
+              <!-- <li>FAQ</li> -->
+             <li>Stories</li>
+            
+          </ul>
+          <div class="socials">
+            <ul>
+          <h3>Socials</h3>
+          <div class="images">
+              <img src="images/facebook.jpg" width="40px" height="40px" alt="Facebook">
+              <img src="images/twitter.png" width="40px" height="40px" alt="twitter">
+              <img src="images/instagram.jpg"width="40px" height="40px" alt="instagram">
+              <img src="images/whatsapp.jpg"width="40px" height="40px" alt="whatsapp">
+            </div>
+          </div>
+        </ul>
+        <!-- </div> -->
+         
+      </div>
+      <div class="copyright">
+        <p> © 2024 Sky brands. All rights reserved.</p>
+        <p>FAQs</p>
+        <p>Privacy Policy.</p>
+       </div>
       </div>
     </div>
   </body>
-  <script src="script.js"></script>
+  <script src="./asset/js/script.js"></script>
 </html>
-
