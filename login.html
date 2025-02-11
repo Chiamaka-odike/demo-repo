@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="/asset/CSS/login.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="wrap">
+      <form id="loginForm"><h1 id="text">Login</h1>
+      <p id="errorMessage"></p>
+      
+      <div class="usernameInputs">
+        <input type="text" class="usernameInput" placeholder="Username" required />
+        <i class="bx bxs-user"></i>
+      </div>
+      <div class="inputs" >
+        <input type="password" class="passwordInput" placeholder="Password" required />
+        <i class="bx bxs-lock-alt"></i>
+      </div>
+
+      <div class="remember">
+        <div>
+          <label for=""><input type="checkbox" />Remeber me</label>
+        </div>
+        <div>
+          <a href="#" class="link"> Forgot Password?</a>
+        </div>
+      </div>
+      <div>
+        <button type="submit" class="submitBtn">Login</button>
+      </div>
+    </form>
+      <div class="signup">
+        <p>
+          Don't have an account? <a href="signup.html" class="link">Sign up</a>
+        </p>
+      </div>
+    </div>
+  </body>
+  <script src="./asset/js/login.js"></script>
+</html>

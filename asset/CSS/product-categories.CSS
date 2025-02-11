@@ -8,6 +8,13 @@
 .categoryItem{
     text-decoration: none;
     padding: 10px;
-    border-radius: 8px;
-    background-color: #e1e1e1;
+    /* border-radius: 8px; */
+    /* background-color: rgb(19, 99, 149); */
+    color:  rgb(19, 99, 149);
+    /* width: 200px; */
+    /* height: 100px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }

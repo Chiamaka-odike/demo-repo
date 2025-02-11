@@ -6,13 +6,14 @@
     <title>Home page</title>
   </head>
   <link rel="stylesheet" href="asset/CSS/style.css" />
+  <link rel="stylesheet" href="./asset/CSS/product-categories.CSS">
   <body>
     <div class="Total">
       <div class="container">
         <nav>
           <div class="navTop">
             <div class="navItem">
-              <img
+              <img 
                 src="images/sky logo 3.png"
                 width="80px"
                 height="50px"
@@ -20,13 +21,17 @@
               />
             </div>
             <div class="navItem">
-              <p><a href="product-categories.html">Categoriessss</a></p>
-              <!-- <p><a href="product-categories.html" id="categoryLink"></a>Categoriessss</p> -->
-              <p class="info">About</p>
+              <p class="info" id="link">
+                 Categories▼</p>
+              
+              <p class="info"><a href="#deep" id="about">About</a></p>
               <p class="info">Help</p>
-              <p class="info">Cart</p>
+              <p> <a href="cart.html"  class="info">Cart</a> </p>
             </div>
-            <p class="LogIn">Log in</p>
+            <p><a href="login.html"class="LogIn">Log in</a></p>
+          </div>
+          <div class="toogle-dropdown hide">
+            <div class="dropDown hide"></div>
           </div>
         </nav>
         <div class="main">
@@ -34,60 +39,57 @@
             <p>Shopping Made Easy and Accessible.</p>
           </div>
           <p id="Welcome">Welcome to Sky</p>
-          <p id="body">
-            Your Shopping Adventure Awaits! At Sky, we believe in elevating your
-            shopping experience to new heights. Explore a wide range of curated
-            products designed to bring quality, style, and convenience to your
-            doorstep. Whether you’re looking for the latest trends, everyday
-            essentials, or unique finds, Sky has it all. Shop smart. Shop
-            stylish. Shop Sky.
-          </p>
+        </div>
+          
 
           <!--<div id="start">
             <h3>Get Started!</h3>
           </div>-->
-        </div>
+       
       </div>
-      <div class="lowerBody">
-        <div class="grouping">
-        <div class="firstGrouping" >
-          <div class="deals">
-          <p>FASHION</p>
-        <img src="images/fashion.jpg" width="200px" height="200px" alt="Fashion Icon" />
-      </div>
-      <div class="deals">
-        <p>FURNITURE</p>
-        <img src="images/living room.jpg" width="200px" alt="Living Room" />
-      </div>
-      <div class="deals">
-        <p>GADGETS</p>
-        <img src="images/gadgets.jpg" width="200px" height="200px" alt="Gadgets" />
-      </div>
-      <div class="deals">
-        <p>GROCERIES</p>
-        <img src="images/groceries.jpg" width="200px" height="200px" alt="Groceries" />
-      </div>
-      </div>
-      <div class="secondGrouping">
-        <div class="deals">
-        <p>BEAUTY</p>
-        <img src="images/beauty.jpg" width="200px" height="200px" alt="Beauty" />
-      </div>
-      <div class="deals">
-        <p>SPORTS</p>
-        <img src="images/sports.jpg" width="200px" height="200px"alt="Sports" />
-      </div>
-      <div class="deals">
-        <p>APPLIANCES</p>
-        <img src="images/appliances.jpg" width="200px" height="200px"alt="Appliances" />
-      </div>
-      <div class="deals">
-        <p>CARS</p>
-        <img src="images/car.jpg" width="200px" height="200px" alt="Cars" />
-      </div>
-      </div>
+      <div class="middle">
+        <img src="images/lady.jpg" alt="">
+      <p id="body">
+        Your Shopping Adventure Awaits! At Sky, we believe in elevating your
+        shopping experience to new heights. Explore a wide range of curated
+        products designed to bring quality, style, and convenience to your
+        doorstep. Whether you’re looking for the latest trends, everyday
+        essentials, or unique finds, Sky has it all. 
+        Shop smart.
+         Shop stylish. Shop Sky!
+      </p>
     </div>
-        <div class="deep">
+    <div class="topDeals">
+      <h1 class="tittle">TOP DEALS</h1>
+      <div class="deal1">
+      <div class="item"><img src="images/ovenn.jpg" width="300px" height="300px"alt="">
+      <p class="names">Microwave Oven</p></div>
+      <div class="item">
+      <img src="images/iphone.webp" width="300px" height="300px"alt="">
+    <p class="names">iPhone 15pro max</p></div>
+      <div class="item">
+      <img src="images/lenovo.webp" width="300px" height="300px" alt="">
+    <p class="names">Lenovo Laptop</p></div>
+    </div>
+    <div class="deal2">
+      <div class="item"><img src="images/perfume.avif" width="300px" height="300px" alt="">
+      <p class="names">Caramel Perfume</p></div>
+      <div class="item">
+      <img src="images/tablet.jpg" width="300px" height="300px"alt="">
+    <p class="names">Redmi Tablet</p></div>
+      <div class="item">
+      <img src="images/wrist watch.jpg" width="300px" height="300px" alt="">
+      <p class="names">Rolex Datejust</p>
+    </div>
+    </div>
+
+    </div>
+    
+      <div class="lowerBody">
+        <h1 class="available">AVAILABLE CATEGORIES</h1>
+        <div id="categoiesList"></div>
+        </div>
+        <div id="deep" class="deep">
           <div class="details">
             <div class="note">
               <img

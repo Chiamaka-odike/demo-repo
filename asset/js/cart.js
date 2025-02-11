@@ -1,156 +1,171 @@
-const products = [
-  {
-    id: 1,
-    category: "Waffle",
-    name: "Waffle with berries",
-    price: 6.5,
-    img_url: "images/image-waffle-desktop.jpg",
-  },
-  {
-    id: 2,
-    category: "Creme Brulee",
-    name: "Vanilla Bean Creme Brulee",
-    price: 7.0,
-    img_url: "images/image-creme-brulee-desktop.jpg",
-  },
-  {
-    id: 3,
-    category: "Macaron",
-    name: "Macaron Mix of five",
-    price: 8.0,
-    img_url: "images/image-macaron-desktop.jpg",
-  },
-  {
-    id: 4,
-    category: "Tiramisu",
-    name: "ClassicTiramisu",
-    price: 5.5,
-    img_url: "images/image-tiramisu-desktop.jpg",
-  },
-  {
-    id: 5,
-    category: "Baklava",
-    name: "Pistachio Baklava",
-    price: 4.0,
-    img_url: "images/image-baklava-desktop.jpg",
-  },
-  {
-    id: 6,
-    category: "Pie",
-    name: "Lemon Meringue",
-    price: 5.0,
-    img_url: "images/image-meringue-desktop.jpg",
-  },
+// const products = [
+//   {
+//     id: 1,
+//     category: "Waffle",
+//     name: "Waffle with berries",
+//     price: 6.5,
+//     img_url: "images/image-waffle-desktop.jpg",
+//   },
+//   {
+//     id: 2,
+//     category: "Creme Brulee",
+//     name: "Vanilla Bean Creme Brulee",
+//     price: 7.0,
+//     img_url: "images/image-creme-brulee-desktop.jpg",
+//   },
+//   {
+//     id: 3,
+//     category: "Macaron",
+//     name: "Macaron Mix of five",
+//     price: 8.0,
+//     img_url: "images/image-macaron-desktop.jpg",
+//   },
+//   {
+//     id: 4,
+//     category: "Tiramisu",
+//     name: "ClassicTiramisu",
+//     price: 5.5,
+//     img_url: "images/image-tiramisu-desktop.jpg",
+//   },
+//   {
+//     id: 5,
+//     category: "Baklava",
+//     name: "Pistachio Baklava",
+//     price: 4.0,
+//     img_url: "images/image-baklava-desktop.jpg",
+//   },
+//   {
+//     id: 6,
+//     category: "Pie",
+//     name: "Lemon Meringue",
+//     price: 5.0,
+//     img_url: "images/image-meringue-desktop.jpg",
+//   },
 
-  {
-    id: 7,
-    category: "Cake",
-    name: "Red Velvet Cake",
-    price: 4.5,
-    img_url: "images/image-cake-desktop.jpg",
-  },
-  {
-    id: 8,
-    category: "Brownie",
-    name: "Salted Caramel Brownie",
-    price: 5.5,
-    img_url: "images/image-brownie-desktop.jpg",
-  },
-  {
-    id: 9,
-    category: "Panna Cotta",
-    name: "Vanilla Panna Cotta",
-    price: 6.5,
-    img_url: "images/image-panna-cotta-desktop.jpg",
-  },
-];
+//   {
+//     id: 7,
+//     category: "Cake",
+//     name: "Red Velvet Cake",
+//     price: 4.5,
+//     img_url: "images/image-cake-desktop.jpg",
+//   },
+//   {
+//     id: 8,
+//     category: "Brownie",
+//     name: "Salted Caramel Brownie",
+//     price: 5.5,
+//     img_url: "images/image-brownie-desktop.jpg",
+//   },
+//   {
+//     id: 9,
+//     category: "Panna Cotta",
+//     name: "Vanilla Panna Cotta",
+//     price: 6.5,
+//     img_url: "images/image-panna-cotta-desktop.jpg",
+//   },
+// ];
+
+const emptyCart = {
+  totalPrice: 0.0,
+  totalQuantity: 0,
+  products: [],
+};
+var storedCart = localStorage.getItem("cart");
+var cart;
+if (storedCart) {
+  cart = JSON.parse(storedCart);
+} else {
+  cart = emptyCart;
+}
 
 function displayProducts() {
   const productList = document.getElementById("productList");
-  for (const product of products) {
+  productList.innerHTML = ""; //clears the product list before displaying the updated cart items
+  cart.products.forEach((product, index) => {
     const productContainer = document.createElement("div");
     productContainer.classList.add("product");
     productContainer.innerHTML = `<img
-                  src=${product.img_url}
+                  src=${product.thumbnail}
                   alt="waffle"
                   width="150px"
                   class="dessert-image"
                   height="150px"
                 />
 
-                <button onclick="addToCart(${product.id})">
+                 <button onclick="removeFromCart(${index})">
                   <img
-                    src="images/icon-add-to-cart.svg"
+                    src="images/icon-remove-item.svg" 
                     alt=""
                     width="13px"
-                  />Add to cart
+                  />Remove
                 </button>
 
                 <div class="description">
                   <p class="snack">${product.category}</p>
-                  <p class="dessert-name">${product.name}</p>
+                  <p class="dessert-name">${product.title}</p>
                   <p class="amount">$${product.price}</p>
-                </div>`;
+                </div>`; //dynamically creating the HTML content
 
-    productList.appendChild(productContainer);
-  }
+    productList.appendChild(productContainer); //appends each productContainer to productList
+  });
+  displayCarts();
 }
 
-var cart = {
-  totalPrice: 0.0,
-  totalQuantity: 0,
-  products: [],
-};
 const cartList = document.getElementById("cartList");
 
 function displayCarts() {
   cart.totalPrice = 0;
-  cart.totalQuantity = 0;
-  for (const product of cart.products) {
+  cart.totalQuantity = 0; // resets the total price and quantity
+  compiledProducts().forEach((product, index) => {
     const cartProduct = document.createElement("div");
 
     cartProduct.classList.add("cartProduct");
     cartProduct.innerHTML = `
     <div class="item">
-    <p class="item-name">${product.name}</p>
-    <p><span class="repeat">${product.quantity}x</span> @ $${product.price} $${
-      product.price * product.quantity
-    }</p></div> <button onclick="removeFromCart(${
-      product.id
-    })"><img src="images/icon-remove-item.svg" width="10px" alt=""></button>`;
+    <p class="item-name">${product.title}</p>
+    <p><span class="repeat">${product.cartCount}x</span> @ $${product.price} $${product.cartPrice}</p></div> `;
 
-    cartList.appendChild(cartProduct);
-    cart.totalPrice += product.price * product.quantity;
-    cart.totalQuantity += product.quantity;
-  }
+    cartList.appendChild(cartProduct); //adds each product to the cart list.
+    cart.totalPrice += product.cartPrice;
+    cart.totalQuantity += 1;
+  });
+
   const totalPrice = document.getElementById("dollar");
-  totalPrice.innerText = "$" + cart.totalPrice;
+  totalPrice.innerText = "$" + Number(cart.totalPrice).toFixed(2);
 
   const cartQuantity = document.getElementById("cartQuantity");
 
   cartQuantity.innerText = "(" + cart.totalQuantity + ")";
-}
+} //updates the total price and total quantity
+
+
+
 function addToCart(id) {
-  const productToAdd = products.find((product) => product.id == id);
+  const productToAdd = products.find((product) => product.id == id); //finds the product with the given id in the product list
   const existingProductIndex = cart.products.findIndex(
-    (product) => product.id == productToAdd.id
-  );
+    (product) => product.id == productToAdd.id);// chech if the product already exists in the cart
+  
+  
+
   if (existingProductIndex != -1) {
-    cart.products[existingProductIndex].quantity += 1;
+    cart.products[existingProductIndex].quantity += 1; // if the product already exiats in the cart, increase the quantity
   } else {
     cart.products.push({ ...productToAdd, quantity: 1 });
   }
 
-  /*cart.totalQuantity += 1;
-  cart.totalPrice += productToAdd.price * 1;*/
   cartList.innerHTML = "";
 
-  displayCarts(); // to refresh the browser
+  displayProducts(); // to refresh the browser
 }
-function removeFromCart(id) {
-  cart.products = cart.products.filter((product) => product.id != id);
+function removeFromCart(index) {
+  const product = cart.products[index];
+
+  cart.totalPrice -= product.price;// update the prices
+  cart.totalQuantity -= 1;
+  cart.products.splice(index, 1);
+  localStorage.setItem("cart", JSON.stringify(cart));
   cartList.innerHTML = ""; //to stop it from remebering the former products
-  displayCarts();
+  displayProducts();
 }
 
 const confirmButton = document.getElementById("Confirm");
@@ -158,7 +173,7 @@ const modal = document.querySelector(".modal");
 const closeModalButton = document.getElementById("closeModal");
 
 closeModalButton.addEventListener("click", function () {
-  modal.classList.add("hide");
+  modal.classList.add("hide");// hide the modal when the button is clicked
 });
 confirmButton.addEventListener("click", function () {
   if (cart.products.length == 0) {
@@ -170,25 +185,70 @@ confirmButton.addEventListener("click", function () {
 });
 function displayModalProducts() {
   const productList = document.getElementById("orderContent");
-  productList.innerHTML = "";
-  for (const product of cart.products) {
+  productList.innerHTML = "";//selects modal content and clears old products
+  for (const product of compiledProducts()) {
     const modalProduct = document.createElement("div");
     modalProduct.classList.add("modalProductContainer");
     modalProduct.innerHTML = `<div class="modalProductContent">
-  <img src="${product.img_url}" alt="" />
+  <img src="${product.thumbnail}" alt="" />
   <div>
-    <p>${product.name}</p>
-    <p>${product.quantity} @$${product.price}</p>
+    <p>${product.title}</p>
+    <p>${product.cartCount} @$${product.price}</p>
   </div>
 </div>
-<div>$${product.quantity * product.price}</div>
-`;
-    
+<div>$${product.cartPrice}</div>
+`;// loops through the cart products, also includes their details like image, name, price etc
+
     productList.appendChild(modalProduct);
     // cartList.innerHTML = "";
     // displayCarts();
   }
-  productList.innerHTML += `<div class="modalTotalPrice"><p>Order Total</p> <p>$${cart.totalPrice}</p></div>`;
+  productList.innerHTML += `<div class="modalTotalPrice"><p>Order Total</p> <p>$${Number(cart.totalPrice).toFixed(3)}</p></div>`;
+} //adds total order price at the bottom
+
+// const newOrder = document.getElementById("newOrder");
+// newOrder.addEventListener("click", function () {
+//   alert("Payment Succesful!")
+// })
+
+
+
+
+const newOrder = document.getElementById("newOrder");
+const successModal = document.getElementById("successModal");
+const okButton = document.getElementById("okButton");
+const paymentModal = document.querySelector(".paymentModal");
+console.log(newOrder)
+newOrder.addEventListener("click", function () {
+  paymentModal.classList.remove("hide");
+  cart = emptyCart;
+  localStorage.setItem('cart', JSON.stringify(emptyCart));
+  cartList.innerHTML = "";
+  modal.classList.add("hide");
+  displayProducts();
+});
+okButton.addEventListener("click", function () {
+  paymentModal.classList.add("hide");
+});
+
+
+function compiledProducts() {
+  const compileProducts = [];
+
+  cart.products.forEach((product, index) => {
+    const compileProduct = compileProducts.find((p) => p.id === product.id);
+    if (compileProduct) {
+      compileProduct.cartCount += 1;
+      compileProduct.cartPrice =
+        compileProduct.price * compileProduct.cartCount;
+    } else {
+      product.cartCount = 1;
+      product.cartPrice = product.price;
+      compileProducts.push(product);
+    }
+  });
+  return compileProducts;
 }
-displayProducts();
-displayCarts();
+displayProducts();//groups all the products together and keeps track of the price and quantity
+// displayCarts();
+

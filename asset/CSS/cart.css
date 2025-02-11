@@ -5,31 +5,32 @@ body {
   font-family: "Red Hat Text", sans-serif;
   position: relative;
 }
-.modal{
-    position: absolute;
-    background-color: rgb(0 0 0 /60%);
-    width: 100%;
-    height: 100vh;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.modal {
+  position: fixed;
+  background-color: rgb(0 0 0 /60%);
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modalContainer {
+  background-color: #fff;
+  padding: 8px;
+  border-radius: 8px;
+  width: 500px;
+  max-height: 90vh;
+  overflow-y: scroll;
+}
+.hide {
+  display: none !important;
 
-    
 }
-.modalContainer{
-    background-color: #fff;
-    padding: 8px;
-    border-radius: 8px;
-    width: 500px;
-}
-.hide{
-    display: none;
-}
-#Confirm{
-    width: 100%;
-    border: none;
-    cursor: pointer;
+#Confirm {
+  width: 100%;
+  border: none;
+  cursor: pointer;
 }
 .desserts {
   font-family: "Red Hat Text", sans-serif;
@@ -37,11 +38,10 @@ body {
   font-size: 30px;
   font-weight: 800;
 }
-#closeModal{
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    
+#closeModal {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 .images {
   display: flex;
@@ -99,6 +99,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-block: 16px;
   /* height: 100vh; */
 }
 
@@ -134,15 +135,24 @@ img {
   font-size: 12px;
   text-align: center;
 }
-#newOrder{
-    background-color: hsl(14, 86%, 42%);
-    padding: 8px 0;
-    cursor: pointer;
-    border-radius: 15px;
-    font-weight: 600;
-    color: #fff;
-    text-align: center;
+.newOrderContainer{
+  display: flex;
+  justify-content: center;
 }
+#newOrder {
+  background-color: rgb(36, 104, 36);
+  padding: 8px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: 600;
+  color: #fff;
+
+}
+#newOrder:hover {
+  color: rgb(36, 104, 36);
+  background-color: white;
+}
+
 #price {
   display: flex;
   justify-content: space-between;
@@ -183,29 +193,57 @@ img {
   cursor: pointer;
 }
 
-.modalProductContent > img{
-    height: 50px;
-    width: 50px;
-
+.modalProductContent > img {
+  height: 50px;
+  width: 50px;
 }
-.modalProductContainer, .modalProductContent, #orderContent, .modalTotalPrice{
-    display: flex;
+.modalProductContainer,
+.modalProductContent,
+#orderContent,
+.modalTotalPrice {
+  display: flex;
 }
-.modalProductContainer, .modalTotalPrice{
-    justify-content: space-between;
-    
+.modalProductContainer,
+.modalTotalPrice {
+  justify-content: space-between;
 }
-#orderContent{
-    padding: 8px;
-    flex-direction: column;
-    gap: 20px;
-    
+#orderContent {
+  padding: 8px;
+  flex-direction: column;
+  gap: 20px;
 }
-.modalProductContent{
-    gap: 8px;
+.modalProductContent {
+  gap: 8px;
 }
-
-
+.paymentModal {
+  position: fixed;
+  background-color: rgb(0 0 0 /60%);
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#successModal {
+  background-color: #fff;
+  padding: 8px;
+  border-radius: 8px;
+  width: 500px;
+}
+#okButton{
+  background-color: rgb(36, 104, 36);
+  padding: 8px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: 600;
+  color: #fff;
+  
+}
+#okButton:hover{
+  background-color: white;
+  color:rgb(36, 104, 36) ;
+}
 
 /* .icon{
     display: flex;

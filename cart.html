@@ -10,7 +10,7 @@
     <div class="container">
       <div class="arrangement">
         <div class="image-container">
-          <div class="desserts"><h3>Desserts</h3></div>
+          <div class="desserts"><h3>Cart</h3></div>
           <div class="images" id="productList"></div>
         </div>
         <div class="cart">
@@ -38,11 +38,26 @@
           <img src="images/icon-order-confirmed.svg" alt="" />
         </button>
         <h1>Order Confirmed!</h1>
-        <p>We hope you enjoy your food!</p>
+        <p>We hope you enjoy your purchase!</p>
         <div id="orderContent"></div>
-        <div><button id="newOrder">Start New Order</button></div>
+        <div>
+        <div class="newOrderContainer">
+          <button id="newOrder" >Make Payment</button>
+        </div>
+        
+      </div>
       </div>
     </div>
+    <div class="paymentModal hide">
+      <div id="successModal">
+
+        <h2>🎉 Payment Successful!</h2>
+          <p>Your order has been placed successfully.</p>
+          
+          <button id="okButton">OK</button>
+      </div>
+    </div>
+
   </body>
   <script src="./asset/js/cart.js"></script>
 </html>

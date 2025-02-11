@@ -1,0 +1,93 @@
+.title{
+    color: rgb(19, 99, 149);
+    font-family: Arial, Helvetica, sans-serif;
+    /* font-style: italic; */
+    font-weight: bold;
+    font-size: 30px;
+    font-weight: 900;
+    
+    /* border-bottom: 3px solid black; */
+    
+}
+.images{
+    /* display: flex; */
+    border: 3px solid rgb(19, 99, 149);
+    /* width: 300px; */
+    border-radius: 20px;
+    /* background-color: gray; */
+}
+.price{
+    font-family: Arial, Helvetica, sans-serif;
+    /* font-style: italic; */
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(19, 99, 149);
+}
+.productCard{
+    /* display: flex; */
+    /* justify-content: space-between; */
+    align-items: center;
+    gap: 20px;
+}
+.buyNow{
+    /* position: absolute; */
+    font-size: 20px;
+    font-weight: 700;
+    border: 1px solid rgb(19, 99, 149);
+    border-radius: 10px;
+    /* z-index: 1; */
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(19, 99, 149);
+}
+.buyNow:hover{
+    background-color: white;
+    color: rgb(19, 99, 149);
+}
+#productList{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(250, 249, 249);
+}
+.discount{
+    text-decoration: line-through;
+    font-family: Arial, Helvetica, sans-serif;
+    /* font-style: italic; */
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(19, 99, 149);
+}
+.rating{
+    font-family: Arial, Helvetica, sans-serif;
+    /* font-style: italic; */
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(19, 99, 149);
+    /* margin-top: none; */
+}
+/* // function myFunction(username, password) {
+    // if (username == "username" && password == "password")
+    //   return("Correct Password")
+    // } 
+    // else{
+    // re
+    // } */
+    /* // const correctUsername = "username1";
+    // const correctPassword = "password1";
+    
+
+
+    
+    // function checkLogin() {
+    //   const usernameInputs = document.querySelector(".usernameInputs");
+    //   const inputs = document.querySelector("inputs");
+    
+    //   if (usernameInputs === correctUsername && inputs === correctPassword) {
+    //     console.log("correct");
+    //     return "correct password";
+    //   } else if (usernameInputs !== correctUsername && inputs !== correctPassword) {
+    //     console.log("incorrect");
+    //     return "incorrect password";
+    //   }
+    // } */
