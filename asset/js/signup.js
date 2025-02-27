@@ -20,7 +20,7 @@ form.addEventListener("submit", (e) => {
 });
 
 // username more than 8
-// email must be a valid adress
+// email must be a valid address
 // password must be more than 8
 
 function signUpErrors(Username, email, Password, ConfirmPassword) {

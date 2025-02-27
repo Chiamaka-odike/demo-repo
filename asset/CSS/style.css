@@ -1,23 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 body {
-  /* padding: 30px; */
-
-  /* background-color: rgb(250, 249, 249); */
+ margin: 0;
+ padding: 0;
 }
 .container {
-  background-image: url("/images/laptop\ ecommerce.jpg");
+  background-image: url("/images/pexels-cottonbro-3944405.jpg");
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
   height: 600px;
-  /* margin-top: 30px; */
+  position: relative;
+ 
 }
 nav {
   background-color: rgb(246, 244, 244);
-  /* color: white; */
+  
   padding: 20px 50px;
-  /* margin-bottom: 20px; */
+ 
   position: relative;
 }
 .toogle-dropdown .hide {
@@ -38,7 +38,6 @@ nav {
   display: grid;
   width: 100vw;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  /* gap: 10px;  */
   padding: 10px; 
   position: absolute;
   top: 100px;
@@ -46,12 +45,10 @@ nav {
   
 
 }
-/* .categoryItem {
-  
-} */
+
+
 .itemBox {
   background-color: #f0f0f0;
-  /* border: 1px solid #ccc; */
   padding: 5px;
   text-align: center;
   
@@ -63,7 +60,6 @@ nav {
 .items {
   text-decoration: none;
   color: rgb(19, 99, 149);
-  /* height: 100px; */
 }
 
 .navTop {
@@ -81,6 +77,30 @@ nav {
   font-size: 20px;
   color: rgb(19, 99, 149);
 }
+.sideBar{
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.399);
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px rgba(0,0,0,0.1);
+  /* display: none; */
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-left: 30px;
+
+
+}
+.menu{
+  display: none;
+}
+.details{
+  margin: 30px;
+  width: 100%;
+}
 #about{
   text-decoration: none;
   color: rgb(19, 99, 149);
@@ -95,8 +115,6 @@ nav {
   color: rgb(19, 99, 149) ;
 }
 .info:hover {
-  /* transform: scale(1.1); */
-  /* text-shadow: 2px 2px 4px gray; */
   text-decoration: underline;
 }
 .LogIn {
@@ -119,8 +137,7 @@ nav {
   font-weight: 600;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   width: 400px;
-  color: white;
-  text-shadow: blue;
+  color:rgb(19, 99, 149);
 }
 .middle {
   display: flex;
@@ -135,13 +152,10 @@ nav {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: bold;
   font-size: 20px;
-  /* font-style: italic; */
-  /* border-bottom: #fff solid 3px; */
   width: fit-content;
-  color: white;
+  color:rgb(19, 99, 149);
 }
 #body {
-  /* width: 500px; */
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: 500;
   font-size: 20px;
@@ -151,6 +165,7 @@ nav {
 }
 .main {
   padding: 30px;
+  color: rgb(61, 130, 173) !important;
 }
 
 .tittle {
@@ -193,20 +208,9 @@ nav {
 }
 #categoiesList {
   padding: 20px;
-  /* width: 50%; */
   display: flex;
-  flex-wrap: wrap;
-  
-  
+  flex-wrap: wrap; 
 }
-/* .categoryItem {
-  color: rgb(19, 99, 149);
-  background-color: rgb(250, 249, 249);
-  border-radius: 5px;
-  
-  
-  
-} */
 .lowerBody {
   /* background-color: skyblue; */
   background-color: rgb(250, 249, 249);
@@ -276,6 +280,10 @@ nav {
 .subscibe {
   width: 500px;
 }
+.usefulLinks li a{
+  text-decoration: none;
+  color:rgb(19, 99, 149) ;
+}
 .fbutton {
   padding: 5px;
   background-color: rgb(19, 99, 149);
@@ -320,14 +328,18 @@ nav {
 /* MEDIA QUERIES */
 /* TABLET */
 @media (max-width: 768px) {
+  .intro {
+    width: 30%;
+    font-size: 30px;
+  }
 }
 /* MOBILE */
 @media (max-width: 480px) {
   body {
-    padding: 10px;
+    padding: 15px;
   }
   .Total {
-    padding: 50px;
+    padding: 5px;
   }
   .info {
     display: none;
@@ -340,10 +352,29 @@ nav {
     display: flex;
     flex-direction: column;
   }
+  .menu{
+    display: flex;
+  }
+  .sideBar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.399);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0,0,0,0.1);
+    /* display: none; */
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-left: 30px;
+  }  
   .container {
-    background-image: url("/images/laptop\ ecommerce.jpg");
-    height: 50%;
+    background-image: url("/images/pexels-cottonbro-3944405.jpg");
+    height: 60vh;
     width: 100%;
+    top: auto;
   }
   .intro {
     width: 20%;
@@ -352,17 +383,24 @@ nav {
   .middle {
     display: flex;
     flex-direction: column;
+    align-items: center;
+  }
+  .lady{
+    width: 90vw;
+    height: 50vh;
+    align-items: center;
   }
   #body {
-    width: 100%;
+    width: 120%;
     font-size: 20px;
+    /* padding: 20px; */
   }
   .deal1 {
     display: flex;
     flex-direction: column;
     padding: 30px;
-    width: 50%;
-    height: 50%;
+    width: 100%;
+    height: 100%;
   }
   .deal2 {
     display: flex;
@@ -375,9 +413,15 @@ nav {
   }
   .names {
     align-items: center;
+    width:90%;
+
   }
   .available {
-    width: 150%;
+    width: 100%;
+  }
+  #categoiesList{
+    display: flex;
+    flex-direction: column;
   }
   .firstGrouping {
     display: flex;
@@ -404,6 +448,7 @@ nav {
   .footer {
     display: flex;
     flex-direction: column;
+    padding: 20px;
   }
   .newsletter {
     width: 120%;
@@ -418,6 +463,7 @@ nav {
   .copyright {
     display: flex;
     flex-direction: column;
+    padding-left: 70px;
   }
 }
 /* MOBILE */

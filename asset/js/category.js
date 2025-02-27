@@ -41,8 +41,11 @@ const cart = JSON.parse(localStorage.getItem("cart")) || {
   totalQuantity: 0,
   products: [],
 };
+
 const cartNo = document.getElementById("cartNo")
 cartNo.innerText = cart.products.length
+
+
 
 function Addtocart(productId) {
   const product = apiProducts.find((product) => product.id == productId);

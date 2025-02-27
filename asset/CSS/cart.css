@@ -5,6 +5,21 @@ body {
   font-family: "Red Hat Text", sans-serif;
   position: relative;
 }
+nav {
+  background-color:rgb(19, 99, 149) ;
+  color: white;
+  padding: 20px 50px;
+  
+}
+.navItem{
+  display: flex;
+  justify-content: space-between;
+}
+.LimitedOffer{
+  font-size: 20px;
+  border-bottom: 3px solid #fff;
+  color: #fff;
+}
 .modal {
   position: fixed;
   background-color: rgb(0 0 0 /60%);
@@ -34,7 +49,7 @@ body {
 }
 .desserts {
   font-family: "Red Hat Text", sans-serif;
-  color: rgb(67, 49, 49);
+  color: rgb(19, 99, 149);
   font-size: 30px;
   font-weight: 800;
 }
@@ -51,7 +66,7 @@ body {
 }
 
 .border {
-  border: hsl(14, 86%, 42%) solid 2px;
+  border: rgb(19, 99, 149)solid 2px;
 }
 img {
   border-radius: 8px;
@@ -67,7 +82,7 @@ img {
 }
 .amount {
   font-weight: 500;
-  color: hsl(14, 86%, 42%);
+  color: rgb(19, 99, 149);
   font-family: red hat text;
 }
 .cart {
@@ -76,7 +91,7 @@ img {
   height: fit-content;
 }
 #heading {
-  color: hsl(14, 86%, 42%);
+  color: rgb(19, 99, 149);
   font-weight: bold;
   font-size: 20px;
   margin-bottom: 10px;
@@ -88,7 +103,7 @@ img {
   padding: 5px;
 }
 .repeat {
-  color: hsl(14, 86%, 42%);
+  color: rgb(19, 99, 149);
 }
 .arrangement {
   display: flex;
@@ -127,7 +142,7 @@ img {
   margin: 0;
 }
 .order {
-  background-color: hsl(14, 86%, 42%);
+  background-color: rgb(19, 99, 149);
   padding: 8px 0;
   border-radius: 15px;
   font-weight: 600;
@@ -161,12 +176,17 @@ img {
   font-weight: bold;
   font-size: 20px;
 }
+#productList {
+  width: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
 .product {
   display: flex;
   flex-direction: column;
 }
 .product > button {
-  /* width: 100px; */
+  
   padding: 7px 20px 7px 20px;
   margin: -10% auto 10px auto;
   border-radius: 50px;
@@ -245,18 +265,26 @@ img {
   color:rgb(36, 104, 36) ;
 }
 
-/* .icon{
-    display: flex;
-  
-} */
+
+@media (max-width: 768px) {
+  #productList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 480px) {
   .arrangement {
     flex-direction: column;
     width: 100%;
   }
-  /* .container{
-       
-    } */
+  .modal{
+    background-color: red;
+  }
+  
+  #productList {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
   .flex {
     flex-direction: column;
     gap: 8px;

@@ -8,6 +8,7 @@ nav {
   padding: 20px 50px;
   position: fixed;
   width: 90%;
+  top: 8px;
 }
 .navTop {
   display: flex;
@@ -26,7 +27,6 @@ nav {
 }
 .search::placeholder {
   color: rgb(19, 99, 149);
-  /* font-size: 20px; */
 }
 .cart {
   display: flex;
@@ -42,28 +42,20 @@ nav {
 .LimitedOffer {
   font-size: 20px;
   border-bottom: 3px solid grey;
-  /* cursor: pointer; */
 }
 .products {
   display: flex;
-  /* background-color: black; */
   padding: 30px;
 }
-.productCard {
-  /* display: flex; */
-}
 main {
-  /* display: flex; */
-  /* justify-content: center; */
   flex-wrap: wrap;
   gap: 25px;
-  /* padding: 10px; */
-  /* background-color: red; */
 }
 #productList {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 122px;
 }
 .page {
   border: 2px solid rgb(19, 99, 149);
@@ -87,11 +79,7 @@ main {
   font-weight: bold;
   color: rgb(19, 99, 149);
 }
-/*.discount{
-    font-weight: bold;
-    color:rgb(19, 99, 149) ;
-    text-decoration: ;
-}*/
+
 .buttons {
   /* display: flex; */
   /* justify-content: space-between; */

@@ -1,5 +1,4 @@
-document.addEventListener("DOMContentLoaded", async function () {}
-  );
+document.addEventListener("DOMContentLoaded", async function () {});
 
 document.addEventListener("DOMContentLoaded", async function () {
   const link = document.getElementById("link");
@@ -20,11 +19,19 @@ document.addEventListener("DOMContentLoaded", async function () {
         `;
   });
 
-  link.addEventListener("click", function () { 
-    console.log("button clicked")
+  link.addEventListener("click", function () {
+    console.log("button clicked");
     toggleDropDown.classList.toggle("hide");
     dropDown.classList.toggle("hide");
   });
+
+    const sideBar = document.querySelector(".sideBar")
+    sideBar.addEventListener("click", function (){
+      console.log("clicked")
+    })
+   
+  
+ 
   data.slice(0, 6).forEach((category) => {
     categoiesList.innerHTML += `
        <a class="categoryItem" href="category.html?slug=${category.slug}">
@@ -32,4 +39,9 @@ document.addEventListener("DOMContentLoaded", async function () {
           <p>${category.name}</p>
         </a>`;
   });
-});
+
+  
+    
+
+  });
+

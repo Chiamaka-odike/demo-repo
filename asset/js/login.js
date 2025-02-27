@@ -1,5 +1,3 @@
-
-
 const button = document.querySelector(".submitBtn");
 const usernameInputs = document.querySelector(".usernameInput");
 const inputs = document.querySelector(".passwordInput");
