@@ -273,14 +273,22 @@ img {
 }
 
 @media (max-width: 480px) {
+  *{
+    padding: 5px;
+  }
   .arrangement {
     flex-direction: column;
     width: 100%;
   }
-  .modal{
-    background-color: red;
+  .LimitedOffer{
+    font-size: 15px;
+    border-bottom: 2px solid #fff;
+    color: #fff;
   }
-  
+  .skyLogo{
+    width: 60px;
+    height: 40px;
+  }
   #productList {
     grid-template-columns: repeat(1, 1fr);
   }

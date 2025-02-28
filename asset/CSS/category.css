@@ -15,7 +15,7 @@ nav {
   align-items: center;
   justify-content: space-between;
 }
-.searchBar {
+/* .searchBar {
   background-color: white;
   padding: 10px 20px;
   border-radius: 10px;
@@ -27,7 +27,7 @@ nav {
 }
 .search::placeholder {
   color: rgb(19, 99, 149);
-}
+} */
 .cart {
   display: flex;
   gap: 20px;
@@ -103,10 +103,25 @@ button:hover {
   body {
     padding: 20px;
   }
+  nav {
+    background-color: rgb(19, 99, 149);
+    color: white;
+    padding: 20px 50px;
+    position: fixed;
+    width: 60%;
+    top: 8px;
+  }
   .navTop {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     padding: 1px;
+  }
+  .skyLogo{
+    width: 60px;
+    height: 40px;
+  }
+  .LimitedOffer{
+    display: none;
   }
   .navItem {
     margin-bottom: 20px;

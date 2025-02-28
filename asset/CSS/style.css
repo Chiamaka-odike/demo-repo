@@ -51,6 +51,10 @@ nav {
 
 }
 .navRight{
+  /* display: none; */
+}
+.cart{
+  color: rgb(19, 99, 149) ;
   display: none;
 }
 
