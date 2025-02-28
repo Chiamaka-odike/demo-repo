@@ -50,7 +50,9 @@ nav {
   
 
 }
-
+.navRight{
+  display: none;
+}
 
 .itemBox {
   background-color: #f0f0f0;
@@ -219,6 +221,7 @@ nav {
 .lowerBody {
   /* background-color: skyblue; */
   background-color: rgb(250, 249, 249);
+  display: none;
 }
 .grouping {
   background-color: rgb(250, 249, 249);
@@ -351,16 +354,20 @@ nav {
   }
   .navTop {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
+  }
+  .skyLogo{
+    width: 60px;
+    height: 40px;
   }
   .navItem {
     display: flex;
     flex-direction: column;
   }
-  .menu{
+  /* .menu{
     display: flex;
-  }
-  .sideBar{
+  } */
+  /* .sideBar{
     position: fixed;
     top: 0;
     right: 0;
@@ -370,20 +377,43 @@ nav {
     background-color: rgba(255, 255, 255, 0.399);
     backdrop-filter: blur(10px);
     box-shadow: -10px 0 10px rgba(0,0,0,0.1);
-    /* display: none; */
+    display: none;
     align-items: flex-start;
     justify-content: flex-start;
     margin-left: 30px;
-  }  
+  }   */
   .container {
     background-image: url("/images/pexels-cottonbro-3944405.jpg");
     height: 60vh;
     width: 100%;
     top: auto;
   }
+  .LogIn {
+    border: 3px solid rgb(19, 99, 149);
+    color: rgb(19, 99, 149);
+    padding: 5px 10px;
+    cursor: pointer;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    text-decoration: none;
+  }
+  
+  .LogIn:hover {
+    background-color: rgb(19, 99, 149);
+    color: #fff;
+  }
+  .navRight{
+    display: flex;
+    gap: 10px;
+    
+  }
+  .cart{
+    color: rgb(19, 99, 149) ;
+  }
   .intro {
     width: 20%;
-    font-size: 15px;
+    font-size: 20px;
   }
   .middle {
     display: flex;
@@ -423,6 +453,11 @@ nav {
   }
   .available {
     width: 100%;
+  }
+  .lowerBody{
+    background-color: rgb(250, 249, 249);
+  display: flex;
+  flex-direction: column;
   }
   #categoiesList{
     display: flex;
